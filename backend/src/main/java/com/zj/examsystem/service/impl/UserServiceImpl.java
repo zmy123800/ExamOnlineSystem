@@ -220,10 +220,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         for (Float f : correctList) {
             sum += f;
         }
-        result.put("average", sum / correctList.size());
+        // 新学生没有任何测验记录，此时列表为空，average 和 max 均取 0
+        result.put("average", correctList.isEmpty() ? 0.0f : sum / correctList.size());
 
         // max correctness
-        result.put("max", correctList.get(0));
+        result.put("max", correctList.isEmpty() ? 0.0f : correctList.get(0));
 
         // test history: []
 

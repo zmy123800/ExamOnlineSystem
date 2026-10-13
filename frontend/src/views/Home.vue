@@ -183,13 +183,13 @@ export default {
                 title: "平均正确率",
                 subtitle: suffix + "在所有测验中的平均正确率",
                 src: require("../assets/home/icon_test.png"),
-                number: res.average.toFixed(2),
+                number: res.average,
               },
               {
                 title: "最高正确率",
                 subtitle: suffix + "在所有测验中的最高正确率",
                 src: require("../assets/home/icon_success.png"),
-                number: res.max.toFixed(2),
+                number: res.max,
               },
               {
                 title: "近七天完成测验的次数",
